@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import "./App.css";
-import data from "./data.js";
 import HomeScreen from "./Screens/HomeScreen.js";
 import ProductScreen from "./Screens/ProductScreen.js";
 
