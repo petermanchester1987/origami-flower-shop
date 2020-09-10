@@ -1,0 +1,177 @@
+html {
+  font-size: 62.5%; /**/
+  box-sizing: border-box;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #cc5200;
+}
+
+li {
+  list-style: none;
+}
+
+/* Main Container */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+/* Header */
+
+header {
+  grid-area: header;
+  background-color: #334d4d;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.brand a {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-links a:hover {
+  color: #cc5200;
+}
+
+/* Main */
+
+main {
+  grid-area: main;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: #334d4d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home Screen */
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products li {
+  list-style: none;
+  padding: 0;
+  flex: 0 1 34rem;
+  margin: 1rem;
+  height: 50rem;
+  border-bottom: 0.1rem solid #c0c0c0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-name a {
+  color: #334d4d;
+}
+
+.product-name a:hover {
+  color: #cc5200;
+}
+
+.product-brand {
+  font-size: 1.2rem;
+  color: #808080;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product-image {
+  max-width: 34rem;
+  max-height: 34rem;
+}
+
+.product-rating {
+  margin-bottom: 1rem;
+}
+
+/* SideBar */
+
+.brand button {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  transform: translateX(-30rem);
+  transition: all 0.5s;
+  width: 30rem;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
+.sidebar-menu-title {
+  padding-left: 1rem;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-close-button {
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.9rem;
+  padding: 0rem;
+  position: absolute;
+  right: 0.75rem;
+  top: 1.5rem;
+}
