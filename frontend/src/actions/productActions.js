@@ -4,6 +4,9 @@ const {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
   PRODUCT_LIST_FAILED,
+  PRODUCT_DETAILS_REQUEST,
+  PRODUCT_DETAILS_SUCCESS,
+  PRODUCT_DETAILS_FAILED,
 } = require("../constants/productConstants");
 
 const listProducts = () => async (dispatch) => {
@@ -13,9 +16,19 @@ const listProducts = () => async (dispatch) => {
     const { data } = await axios.get("/api/products");
 
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
-  } catch (err) {
-    dispatch({ type: PRODUCT_LIST_FAILED, payload: err.message });
+  } catch (error) {
+    dispatch({ type: PRODUCT_LIST_FAILED, payload: error.message });
   }
 };
 
-export { listProducts };
+const detailsProduct = (productId) => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId });
+    const { data } = await axios.get(`/api/products/${productId}`);
+    dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: PRODUCT_DETAILS_FAILED, payload: error.message });
+  }
+};
+
+export { listProducts, detailsProduct };
