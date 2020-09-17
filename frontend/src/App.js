@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import "./App.css";
 import HomeScreen from "./screens/HomeScreen.js";
 import ProductScreen from "./screens/ProductScreen.js";
 import CartScreen from "./screens/CartScreen.js";

@@ -8,7 +8,7 @@ export default {
       price: 25,
       brand: "Roses",
       rating: 4.5,
-      numReview: 10,
+      numReviews: 10,
     },
     {
       _id: "000002",
@@ -18,7 +18,7 @@ export default {
       price: 40,
       brand: "Roses",
       rating: 5,
-      numReview: 20,
+      numReviews: 20,
     },
     {
       _id: "000003",
@@ -28,7 +28,7 @@ export default {
       price: 60,
       brand: "Wedding",
       rating: 4.8,
-      numReview: 5,
+      numReviews: 5,
     },
   ],
 };
